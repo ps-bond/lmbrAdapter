@@ -12,3 +12,10 @@ The queue code (micropython doesn't currently implement queues, although for thi
 This is under development only.  I'm hoping there's enough power available to run the Pico from the port, but that remains to be seen.
 The code itself is crude; it's just a polling loop.  
 It's not meant to be pretty, it's just for a demonstration.
+
+TODO:
+
+More testing
+Create BOM with sources 
+Create a build guide with pictures
+Generate a UF2 image that contains everything needed - see https://github.com/raspberrypi/picotool 
