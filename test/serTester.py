@@ -9,9 +9,7 @@ uart.init(bits=8, parity=None, stop=1)
 while True:
     # Poll the serial port
     if uart.any():
-        # Too lazy to build this char by char
-        speedData = uart.readline()
-        print(speedData)
-    
+        inData = uart.readline()
+        print(inData)
         
-    time.sleep_ms(1000)
+    time.sleep_ms(500)
