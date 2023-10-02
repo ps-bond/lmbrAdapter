@@ -1,0 +1,1 @@
+Placeholder - will contain STL files for case when complete
