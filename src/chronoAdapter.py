@@ -1,8 +1,8 @@
 # Adapater for LMBR chrony
 
 import bluetooth
-import random
-import struct
+# import random
+# import struct
 import time
 import queue
 from ble_advertising import advertising_payload
@@ -29,6 +29,7 @@ If the LMBR does not output a complete line the read will stall.
 
 Please note that the BT lib in particular is not free for commercial use.
 """
+
 deviceName = "pyLMBR"
 
 _IRQ_CENTRAL_CONNECT = const(1)
@@ -54,12 +55,12 @@ _UART_SERVICE = (
     (_UART_TX, _UART_RX),
 )
 
-
 class BLESimplePeripheral:
     """
     Simple peripheral example of Bluetooth (BLE) comms from
     https://electrocredible.com/raspberry-pi-pico-w-bluetooth-ble-micropython/
     """
+    
     def __init__(self, ble, name="mpy-uart"):
         self._ble = ble
         self._ble.active(True)
@@ -107,8 +108,9 @@ def lmbrAdapter():
     Quick & dirty adapter code - read the UART, buffer any data & print it on
     the default serial port, then try to send it out via BLE
     """
+    
     ble = bluetooth.BLE()
-    peripheral = BLESimplePeripheral(ble, deviceName)
+    peripheral = BLESimplePeripheral(ble, deviceName)            
 
     # Configure the serial port
     uart = UART(1, baudrate=19200, tx=Pin(4), rx=Pin(5))
