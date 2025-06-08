@@ -15,7 +15,7 @@ This is under development only.
 The code itself is crude; it's just a polling loop.  
 It's not meant to be pretty, it's just for a demonstration.  
 
-TODO:  
+## TODO:  
 
 More testing  
 Create BOM with sources  
